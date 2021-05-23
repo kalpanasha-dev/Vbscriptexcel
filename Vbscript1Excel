@@ -1,0 +1,26 @@
+objExcel (Set objExcel = CreateObject("Excel.Application") ) 
+.ActiveWindow.FreezePanes = True 
+.Columns(3).AutoFit() 
+.Columns(1).ColumnWidth = 10 
+.Columns(3).Font.ColorIndex = BLUE 
+.Columns(i).Interior.ColorIndex = num 
+.Rows(i).Interior.ColorIndex = num 
+.visible = true Make Excel visible 
+.workbooks.add Add a new workbook 
+objWorkbook (Set objWorkbook = objExcel.Workbooks.Open(wkbkname) )  objWorkBook (Set objWorkbook = objExcel.Workbooks.Add()) .sheets.count Number of worksheets in the workbook 
+.sheets(i).Name The name of the nth worksheet 
+.Worksheets(wksheetno) 
+objWorkSheet (Set objWorkSheet = objExcel.ActiveWorkbook.Worksheets(Sheet)) .Name = "VBS_Excel_Example" 
+.Cells(row,col).Value = "ColA Hdr" 
+.Range("A1:M1").Font.Bold = True 
+.Range("A1:M1").Font.Size = 14 
+Set objWorksheet = objWorkbook.Worksheets(1) 
+objRange (Set objRange = objWorksheet.UsedRange) 
+objRange.select 
+Freeze the panes 
+objWorkSheet.Range("A2").Select 
+objExcel.ActiveWindow.FreezePanes = True 
+Cleanup 
+ActiveWorkbook.SaveAs pathname 
+ActiveWorkbook.Close 
+Application.Quit Quit Excel
